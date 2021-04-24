@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FaceId.Control.Ventanas
+namespace FaceId.Presentacion.Ventanas
 {
-    public partial class VenInicio : UserControl
+    public partial class Login : UserControl
     {
-        public VenInicio()
+        public Login()
         {
             InitializeComponent();
         }

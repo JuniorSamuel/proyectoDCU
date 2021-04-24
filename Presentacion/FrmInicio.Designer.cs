@@ -29,18 +29,21 @@ namespace FaceId
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picVideo = new System.Windows.Forms.PictureBox();
             this.labInformacion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.picVideo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVideo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picVideo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -49,7 +52,7 @@ namespace FaceId
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(512, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(508, 421);
+            this.panel2.Size = new System.Drawing.Size(508, 445);
             this.panel2.TabIndex = 4;
             // 
             // panel3
@@ -60,6 +63,48 @@ namespace FaceId
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1020, 51);
             this.panel3.TabIndex = 5;
+            // 
+            // labInformacion
+            // 
+            this.labInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labInformacion.AutoSize = true;
+            this.labInformacion.Location = new System.Drawing.Point(228, 13);
+            this.labInformacion.Name = "labInformacion";
+            this.labInformacion.Size = new System.Drawing.Size(35, 13);
+            this.labInformacion.TabIndex = 3;
+            this.labInformacion.Text = "label1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labInformacion);
+            this.panel1.Controls.Add(this.picVideo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(512, 445);
+            this.panel1.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 51);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1020, 445);
+            this.panel4.TabIndex = 6;
+            // 
+            // picVideo
+            // 
+            this.picVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picVideo.Location = new System.Drawing.Point(72, 29);
+            this.picVideo.Name = "picVideo";
+            this.picVideo.Size = new System.Drawing.Size(376, 300);
+            this.picVideo.TabIndex = 2;
+            this.picVideo.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -73,63 +118,35 @@ namespace FaceId
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // picVideo
+            // timer1
             // 
-            this.picVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picVideo.Location = new System.Drawing.Point(38, 29);
-            this.picVideo.Name = "picVideo";
-            this.picVideo.Size = new System.Drawing.Size(444, 358);
-            this.picVideo.TabIndex = 2;
-            this.picVideo.TabStop = false;
+            this.timer1.Interval = 45000;
             // 
-            // labInformacion
+            // label1
             // 
-            this.labInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labInformacion.AutoSize = true;
-            this.labInformacion.Location = new System.Drawing.Point(240, 13);
-            this.labInformacion.Name = "labInformacion";
-            this.labInformacion.Size = new System.Drawing.Size(35, 13);
-            this.labInformacion.TabIndex = 3;
-            this.labInformacion.Text = "label1";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.labInformacion);
-            this.panel1.Controls.Add(this.picVideo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(512, 421);
-            this.panel1.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 51);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1020, 421);
-            this.panel4.TabIndex = 6;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(154, 353);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
             // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1020, 472);
+            this.ClientSize = new System.Drawing.Size(1020, 496);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Name = "FrmInicio";
             this.Text = "Face ID";
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVideo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picVideo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -139,9 +156,11 @@ namespace FaceId
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox picVideo;
-        private System.Windows.Forms.Label labInformacion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Label labInformacion;
+        public System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

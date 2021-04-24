@@ -14,6 +14,7 @@ namespace FaceId.Modelo.base_de_datos
     {
         Persona perosna;
 
+        public PersonaDto() { }
         public PersonaDto(Persona perosna)
         {
             this.perosna = perosna;
@@ -41,12 +42,14 @@ namespace FaceId.Modelo.base_de_datos
             SQLiteCommand command;
             SQLiteDataReader reader;
             command = conn.CreateCommand();
-            command.CommandText = "select * from Persona where idCedula = " + cedula + " ";
+            command.CommandText = "select * from Persona where cedula = " + cedula + " ";
             reader = command.ExecuteReader();
-            if (reader.Read())            
-                perosna = new Persona(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetChar(4));
-            else 
-                perosna = null; 
+            if (reader.Read())
+                perosna = new Persona(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5));
+            else
+            {
+                perosna = null;
+            }
 
             return perosna;
             conn.Close();

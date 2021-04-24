@@ -111,6 +111,8 @@
   <ItemGroup>
     <Compile Include="Control\CtlFrmInicio.cs" />
     <Compile Include="Control\CtlFrmRegistro.cs" />
+    <Compile Include="Control\IObserver\IObservador.cs" />
+    <Compile Include="Control\IObserver\IObervables.cs" />
     <Compile Include="Modelo\base de datos\ConnectorSQLite.cs" />
     <Compile Include="Modelo\base de datos\ImagenDto.cs" />
     <Compile Include="Modelo\base de datos\PersonaDto.cs" />
@@ -118,17 +120,23 @@
     <Compile Include="Modelo\Entidades\Persona.cs" />
     <Compile Include="Presentacion\Ventanas\Fabrica.cs" />
     <Compile Include="Presentacion\Ventanas\Interface1.cs" />
+    <Compile Include="Presentacion\Ventanas\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Ventanas\VenSolicitud.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentacion\Ventanas\VenSolicitud.Designer.cs">
       <DependentUpon>VenSolicitud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Ventanas\VenInicio.cs">
+    <Compile Include="Presentacion\Ventanas\VenNoLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentacion\Ventanas\VenInicio.Designer.cs">
-      <DependentUpon>VenInicio.cs</DependentUpon>
+    <Compile Include="Presentacion\Ventanas\VenNoLogin.Designer.cs">
+      <DependentUpon>VenNoLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmInicio.cs">
       <SubType>Form</SubType>
@@ -144,17 +152,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Presentacion\FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmRegistro.resx">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventanas\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventanas\VenSolicitud.resx">
       <DependentUpon>VenSolicitud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Ventanas\VenInicio.resx">
-      <DependentUpon>VenInicio.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Ventanas\VenNoLogin.resx">
+      <DependentUpon>VenNoLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -164,7 +180,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Modelo\base de datos\DatabaseFaceId.db" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
@@ -189,6 +210,9 @@
   <ItemGroup>
     <Content Include="haarcascade_frontalface_default.xml" />
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\Grupo 2.png" />
+    <None Include="Resources\Grupo 1.png" />
+    <None Include="Resources\DataBaseFaceID.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

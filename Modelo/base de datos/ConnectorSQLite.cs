@@ -11,13 +11,13 @@ namespace Modelo.Dao
         //SQLiteConnection sqliteConn;
         public static SQLiteConnection CreateConnection()
         {
+            
             SQLiteConnection sqliteConn = null;
-            sqliteConn = new SQLiteConnection("Data Source=DatabaseFaceId.db; Version = 3; New = True; Compress = True;");
+            sqliteConn = new SQLiteConnection("Data Source = C:/Users/Samy/source/repos/FaceId/Modelo/base de datos/DatabaseFaceId.db;");
             try
             {
 
                 sqliteConn.Open();
-                System.Windows.Forms.MessageBox.Show("Base de datos conectada");
             }
             catch (Exception ex)
             {
