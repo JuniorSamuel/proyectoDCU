@@ -21,13 +21,10 @@ namespace FaceId
 {
     public partial class FrmInicio : Form
     {
-        FilterInfoCollection filtro;
-        VideoCaptureDevice dispositivo;
-
         public FrmInicio()
         {
             InitializeComponent();
             CtlFrmInicio frmInicio = new CtlFrmInicio(this);
         }
-     }
+    }
 }
