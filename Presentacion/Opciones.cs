@@ -17,9 +17,35 @@ namespace FaceId.Presentacion
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnSolicitarOP_Click(object sender, EventArgs e)
         {
-            
+            FrmSolicitar Solicitud = new FrmSolicitar();
+            Solicitud.Show();   
+        }
+
+        private void btnRegistrarOP_Click(object sender, EventArgs e)
+        {
+            FrmRegistro Registro = new FrmRegistro();
+            Registro.Show();
+        }
+
+        private void btnVerDatosOP_Click(object sender, EventArgs e)
+        {
+            //btnRegistrarOP.Enabled = false;
+
+            VerDatos1 VisualizarDatos = new VerDatos1();
+            VisualizarDatos.Show();
+        }
+
+        private void btnSalirOP_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnReporteOP_Click(object sender, EventArgs e)
+        {
+            FrmReporte Cedula = new FrmReporte();
+            Cedula.Show();
         }
     }
 }

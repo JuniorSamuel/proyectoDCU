@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace FaceId.Presentacion
 {
-    public partial class Solicitud : UserControl
+    public partial class VerDatos1 : Form
     {
-        public Solicitud()
+        public VerDatos1()
         {
             InitializeComponent();
+        }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            DatosPDF PDF = new DatosPDF();
+            
         }
     }
 }

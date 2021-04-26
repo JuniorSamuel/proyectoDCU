@@ -1,7 +1,7 @@
 ﻿
-namespace FaceId.Presentacion.Ventanas
+namespace FaceId.Presentacion
 {
-    partial class Solicitudes
+    partial class FrmReporte
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,10 @@ namespace FaceId.Presentacion.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Solicitudes
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 616);
-            this.Name = "Solicitudes";
-            this.Text = "Solicitudes";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "FrmReporte";
         }
 
         #endregion

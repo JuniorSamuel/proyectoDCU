@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FaceId.Presentacion
 {
-    public partial class VerDatos : UserControl
+    public partial class FrmSolicitar : Form
     {
-        public VerDatos()
+        public FrmSolicitar()
         {
             InitializeComponent();
         }

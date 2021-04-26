@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace FaceId.Presentacion
 {
-    public partial class RegistrarDatos : UserControl
+    public partial class FrmReporte : Form
     {
-        public RegistrarDatos()
+        public FrmReporte()
         {
             InitializeComponent();
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Sus Datos han sido guardado exitosamente");
-
         }
     }
 }

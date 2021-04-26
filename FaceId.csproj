@@ -98,6 +98,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -116,28 +117,35 @@
     <Compile Include="Control\CtlFrmRegistro.cs" />
     <Compile Include="Control\IObserver\IObservador.cs" />
     <Compile Include="Control\IObserver\IObervables.cs" />
+    <Compile Include="DatosPDF.cs" />
     <Compile Include="Modelo\base de datos\ConnectorSQLite.cs" />
     <Compile Include="Modelo\base de datos\ImagenDto.cs" />
     <Compile Include="Modelo\base de datos\PersonaDto.cs" />
     <Compile Include="Modelo\Entidades\Imagen.cs" />
     <Compile Include="Modelo\Entidades\Persona.cs" />
+    <Compile Include="Presentacion\FrmRegistroBTN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmRegistroBTN.Designer.cs">
+      <DependentUpon>FrmRegistroBTN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmReporte.Designer.cs">
+      <DependentUpon>FrmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmSolicitar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmSolicitar.Designer.cs">
+      <DependentUpon>FrmSolicitar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Opciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentacion\Opciones.Designer.cs">
       <DependentUpon>Opciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\RegistrarDatos.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentacion\RegistrarDatos.Designer.cs">
-      <DependentUpon>RegistrarDatos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Solicitud.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Solicitud.Designer.cs">
-      <DependentUpon>Solicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Ventanas\Fabrica.cs" />
     <Compile Include="Presentacion\Ventanas\Interface1.cs" />
@@ -177,11 +185,11 @@
     <Compile Include="Presentacion\FrmRegistro.Designer.cs">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\VerDatos.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Presentacion\VerDatos1.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\VerDatos.Designer.cs">
-      <DependentUpon>VerDatos.cs</DependentUpon>
+    <Compile Include="Presentacion\VerDatos1.Designer.cs">
+      <DependentUpon>VerDatos1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -201,14 +209,14 @@
     <EmbeddedResource Include="Presentacion\FrmRegistro.resx">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmRegistroBTN.resx">
+      <DependentUpon>FrmRegistroBTN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmSolicitar.resx">
+      <DependentUpon>FrmSolicitar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Opciones.resx">
       <DependentUpon>Opciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\RegistrarDatos.resx">
-      <DependentUpon>RegistrarDatos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Solicitud.resx">
-      <DependentUpon>Solicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventanas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -222,8 +230,8 @@
     <EmbeddedResource Include="Presentacion\Ventanas\VenNoLogin.resx">
       <DependentUpon>VenNoLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\VerDatos.resx">
-      <DependentUpon>VerDatos.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\VerDatos1.resx">
+      <DependentUpon>VerDatos1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -258,6 +266,21 @@
   <ItemGroup>
     <Content Include="haarcascade_frontalface_default.xml" />
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\registro %281%29.png" />
+    <None Include="Resources\datos1.png" />
+    <None Include="Resources\datos.png" />
+    <None Include="Resources\cerrar-sesion.png" />
+    <None Include="Resources\documento.png" />
+    <None Include="Resources\registrarse 1.png" />
+    <None Include="Resources\registrarse.png" />
+    <None Include="Resources\pdf11.png" />
+    <None Include="Resources\Screenshot 2019-01-06 at 06.04.21.png" />
+    <None Include="Resources\registro1.png" />
+    <None Include="Resources\registro.png" />
+    <None Include="Resources\flecha-correcta c#.png" />
+    <None Include="Resources\atras.png" />
+    <None Include="Resources\siguiente-boton.png" />
+    <None Include="Resources\flecha-correcta1.png" />
     <None Include="Resources\IMAG %285%291.png" />
     <None Include="Resources\IMAG %285%29.png" />
     <None Include="Resources\actualizar.png" />

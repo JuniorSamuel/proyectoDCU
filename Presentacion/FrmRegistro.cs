@@ -26,5 +26,11 @@ namespace FaceId.Presentacion
         {
 
         }
+
+        private void btnRegistroForm_Click(object sender, EventArgs e)
+        {
+            FrmRegistroBTN BTN = new FrmRegistroBTN();
+            BTN.Show();
+        }
     }
 }
