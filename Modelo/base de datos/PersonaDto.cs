@@ -26,7 +26,7 @@ namespace FaceId.Modelo.base_de_datos
             SQLiteConnection conn = ConnectorSQLite.CreateConnection();
             SQLiteCommand sqliteCommand;
             sqliteCommand = conn.CreateCommand();
-            sqliteCommand.CommandText = @"INSERT INTO Persona( idCedula, nombre, edad, fecha_nacimineto, sexo) VALUES (" +
+            sqliteCommand.CommandText = @"INSERT INTO Persona( idCedula, nombre, edad, fecha_nacimineto, sexo, Direccion) VALUES (" +
                 "'" + perosna.cedula + "', " +
                 "" + perosna.nombre + ", " +
                 "" + perosna.edad + ", " +

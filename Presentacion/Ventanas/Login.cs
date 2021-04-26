@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FaceId.Control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace FaceId.Presentacion.Ventanas
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
+            frm.setVentana(Fabrica.getVentana(Ventana.Solicitud));
         }
     }
 }
