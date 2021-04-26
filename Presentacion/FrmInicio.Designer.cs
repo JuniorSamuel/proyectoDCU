@@ -120,7 +120,7 @@ namespace FaceId
             // 
             // timer1
             // 
-            this.timer1.Interval = 45000;
+            this.timer1.Interval = 30000;
             // 
             // label1
             // 

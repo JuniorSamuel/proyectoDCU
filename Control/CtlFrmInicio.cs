@@ -57,7 +57,7 @@ namespace FaceId.Control
         public CtlFrmInicio(FrmInicio frmInicio)
         {
             this.frmInicio = frmInicio;
-            //testDataBase();
+            DataBase();
             carpetaImagenes();
             frmInicio.Load += new EventHandler(init);
             frmInicio.Load += new EventHandler(inicialVideo);
@@ -72,14 +72,9 @@ namespace FaceId.Control
             i = true;
         }
 
-        private void testDataBase()
+        private void DataBase()
         {
-            SQLiteConnection conn = ConnectorSQLite.CreateConnection();
-            PersonaDto p = new PersonaDto();
-            Persona per = p.getPerosna(1);
-            per = p.getPerosna(4);
-            MessageBox.Show(per.nombre);
-            conn.Close();
+            ConnectorSQLite.CreateTable();
         }
 
         private void init(object sender, EventArgs e)
@@ -246,25 +241,19 @@ namespace FaceId.Control
                     recognizer = new EigenFaceRecognizer(ImagesCount, Threshold);
                     recognizer.Train(TrainedFaces.ToArray(), PersonsLabes.ToArray());
                    
-                        frmInicio.timer1.Start();
+                    frmInicio.timer1.Start();
                         
-                        PersonaDto dbPersona = new PersonaDto();
-                        persona = new Persona();
-                        persona = dbPersona.getPerosna(Int32.Parse(name));
+                    //PersonaDto dbPersona = new PersonaDto();
+                    //persona = new Persona();
+                    //persona = dbPersona.getPerosna(Int32.Parse(name));
                         
                         
-                        if ( i ||idLogin != name)
-                        {
-                            VentanaOpciones(Fabrica.getVentana(Ventana.Login));
-                            idLogin = name;
-                            i = false;
-                        }
-                        if (i) { VentanaOpciones(Fabrica.getVentana(Ventana.Login)); i = false; }
-
-                       
-                    
-
-                    
+                    if ( i ||idLogin != name)
+                    {
+                        VentanaOpciones(Fabrica.getVentana(Ventana.Login));
+                        idLogin = name;
+                        i = false;                        
+                    }                                 
                     
                     //Debug.WriteLine(ImagesCount);
                     //Debug.WriteLine(isTrained);
