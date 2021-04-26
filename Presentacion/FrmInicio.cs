@@ -24,7 +24,7 @@ namespace FaceId
         public FrmInicio()
         {
             InitializeComponent();
-            CtlFrmInicio frmInicio = new CtlFrmInicio(this);
+            CtlFrmInicio frmInicio = CtlFrmInicio.getCtlFrmInicio(this);
         }
     }
 }

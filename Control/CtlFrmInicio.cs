@@ -1,33 +1,26 @@
-﻿using System;
+﻿using Emgu.CV;
+using Emgu.CV.CvEnum;
+using Emgu.CV.Face;
+using Emgu.CV.Structure;
+using FaceId.Modelo.Entidades;
+using FaceId.Presentacion.Ventanas;
+using Modelo.Dao;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FaceId.Control.Ventanas;
-using FaceId.Presentacion.Ventanas;
-
-using AForge.Video;
-using AForge.Video.DirectShow;
-
-using Emgu.CV;
-using Emgu.CV.Structure;
-using Emgu.CV.Face;
-using Emgu.CV.CvEnum;
-using System.IO;
-using System.Threading;
-using System.Diagnostics;
-using Modelo.Dao;
-using System.Data.SQLite;
-using FaceId.Modelo.base_de_datos;
-using FaceId.Modelo.Entidades;
 
 namespace FaceId.Control
 {
     class CtlFrmInicio
     {
         //Ventana
+        private static CtlFrmInicio Frm = null;
         FrmInicio frmInicio;
 
         #region Variables
@@ -53,43 +46,48 @@ namespace FaceId.Control
         private bool i = true;
         #endregion
 
-
-        public CtlFrmInicio(FrmInicio frmInicio)
+        private CtlFrmInicio(FrmInicio frmInicio)
         {
             this.frmInicio = frmInicio;
-            //testDataBase();
+            DataBase();
             carpetaImagenes();
             frmInicio.Load += new EventHandler(init);
             frmInicio.Load += new EventHandler(inicialVideo);
             frmInicio.timer1.Tick += new EventHandler(timer_tick);
 
+        }
 
+        public static CtlFrmInicio getCtlFrmInicio(FrmInicio frmInicio)
+        {
+            if (Frm == null)
+            {
+                Frm = new CtlFrmInicio(frmInicio);
+            }
+            return Frm;
+        }
+        public static CtlFrmInicio getCtlFrmInicio()
+        {
+            return Frm;
         }
 
         private void timer_tick(object sender, EventArgs e)
         {
-            VentanaOpciones(Fabrica.getVentana(Ventana.NoLogin));
+            setVentana(Fabrica.getVentana(Ventana.NoLogin));
             i = true;
         }
 
-        private void testDataBase()
+        private void DataBase()
         {
-            SQLiteConnection conn = ConnectorSQLite.CreateConnection();
-            PersonaDto p = new PersonaDto();
-            Persona per = p.getPerosna(1);
-            per = p.getPerosna(4);
-            MessageBox.Show(per.nombre);
-            conn.Close();
+            ConnectorSQLite.CreateTable();
         }
 
         private void init(object sender, EventArgs e)
         {
-            VentanaOpciones(Fabrica.getVentana(Ventana.NoLogin));
+            setVentana(Fabrica.getVentana(Ventana.NoLogin));
         }
 
-        public void VentanaOpciones(UserControl panel)
+        public void setVentana(UserControl panel)
         {
-
             if (frmInicio.panel2.Controls.Count != 0) frmInicio.panel2.Controls.RemoveAt(0);
             
             //panel.Dock = DockStyle.Fill;
@@ -246,25 +244,19 @@ namespace FaceId.Control
                     recognizer = new EigenFaceRecognizer(ImagesCount, Threshold);
                     recognizer.Train(TrainedFaces.ToArray(), PersonsLabes.ToArray());
                    
-                        frmInicio.timer1.Start();
+                    frmInicio.timer1.Start();
                         
-                        //PersonaDto dbPersona = new PersonaDto();
-                        //persona = new Persona();
-                        //persona = dbPersona.getPerosna(Int32.Parse(name));
+                    //PersonaDto dbPersona = new PersonaDto();
+                    //persona = new Persona();
+                    //persona = dbPersona.getPerosna(Int32.Parse(name));
                         
                         
-                        if ( i ||idLogin != name)
-                        {
-                            VentanaOpciones(Fabrica.getVentana(Ventana.Login));
-                            idLogin = name;
-                            i = false;
-                        }
-                        if (i) { VentanaOpciones(Fabrica.getVentana(Ventana.Login)); i = false; }
-
-                       
-                    
-
-                    
+                    if ( i ||idLogin != name)
+                    {
+                        setVentana(Fabrica.getVentana(Ventana.Login));
+                        idLogin = name;
+                        i = false;                        
+                    }                                 
                     
                     //Debug.WriteLine(ImagesCount);
                     //Debug.WriteLine(isTrained);
