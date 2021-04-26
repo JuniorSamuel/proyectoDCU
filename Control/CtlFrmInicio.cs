@@ -248,9 +248,9 @@ namespace FaceId.Control
                    
                         frmInicio.timer1.Start();
                         
-                        PersonaDto dbPersona = new PersonaDto();
-                        persona = new Persona();
-                        persona = dbPersona.getPerosna(Int32.Parse(name));
+                        //PersonaDto dbPersona = new PersonaDto();
+                        //persona = new Persona();
+                        //persona = dbPersona.getPerosna(Int32.Parse(name));
                         
                         
                         if ( i ||idLogin != name)

@@ -13,7 +13,7 @@ namespace Modelo.Dao
         {
             
             SQLiteConnection sqliteConn = null;
-            sqliteConn = new SQLiteConnection("Data Source = C:/Users/Samy/source/repos/FaceId/Modelo/base de datos/DatabaseFaceId.db;");
+            //sqliteConn = new SQLiteConnection("Data Source = C:/Users/Samy/source/repos/FaceId/Modelo/base de datos/DatabaseFaceId.db;");
             try
             {
 
