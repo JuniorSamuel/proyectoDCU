@@ -47,6 +47,7 @@ namespace FaceId.Control
         private bool i = true;
         #endregion
 
+       
         private CtlFrmInicio(FrmInicio frmInicio)
         {
             this.frmInicio = frmInicio;
@@ -55,7 +56,6 @@ namespace FaceId.Control
             frmInicio.Load += new EventHandler(init);
             frmInicio.Load += new EventHandler(inicialVideo);
             frmInicio.timer1.Tick += new EventHandler(timer_tick);
-
         }
 
         public static CtlFrmInicio getCtlFrmInicio(FrmInicio frmInicio)

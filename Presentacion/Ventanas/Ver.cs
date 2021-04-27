@@ -11,17 +11,22 @@ using System.Windows.Forms;
 
 namespace FaceId.Presentacion.Ventanas
 {
-    public partial class Login : UserControl
+    public partial class Ver : UserControl
     {
-        public Login()
+        public Ver()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
-            frm.setVentana(Fabrica.getVentana(Ventana.Ver));
+            frm.setVentana(Fabrica.getVentana(Ventana.Login));
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

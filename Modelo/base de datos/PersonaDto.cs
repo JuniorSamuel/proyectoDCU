@@ -26,14 +26,17 @@ namespace FaceId.Modelo.base_de_datos
             SQLiteConnection conn = ConnectorSQLite.CreateConnection();
             SQLiteCommand sqliteCommand;
             sqliteCommand = conn.CreateCommand();
-            sqliteCommand.CommandText = @"INSERT INTO Persona( idCedula, nombre, edad, fecha_nacimineto, sexo, Direccion) VALUES (" +
-                "'" + perosna.cedula + "', " +
-                "" + perosna.nombre + ", " +
-                "" + perosna.edad + ", " +
+            sqliteCommand.CommandText = @"INSERT INTO Persona( Cedula, nombre, fecha_nacimineto, sexo, Direccion, Nacionalidad, Telefono) VALUES (" +
+                "" + perosna.cedula + ", " +
+                "'"  + perosna.nombre + "', " +
                 "'" + perosna.fecha_nacimiento + "', " +
-                "'" + perosna.sexo + ");";
+                "'" + perosna.sexo + "'," +
+                "'" + perosna.direccion+"'," +
+                "'" + perosna.nacionalidad+"'," +
+                "" + perosna.telefono+");";
             sqliteCommand.ExecuteNonQuery();
             conn.Close();
+            System.Windows.Forms.MessageBox.Show("Final");
         }
 
         public Persona getPerosna(int cedula)
@@ -45,7 +48,7 @@ namespace FaceId.Modelo.base_de_datos
             command.CommandText = "select * from Persona where cedula = " + cedula + " ";
             reader = command.ExecuteReader();
             if (reader.Read())
-                perosna = new Persona(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5));
+                perosna = new Persona(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), reader.GetString(6), reader.GetInt32(7));
             else
             {
                 perosna = null;
