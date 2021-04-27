@@ -16,6 +16,7 @@ namespace Modelo.Dao
             sqliteConn = new SQLiteConnection("Data Source = DatabaseFaceId.db;");
             try
             {
+
                 sqliteConn.Open();
             }
             catch (Exception ex)
@@ -33,13 +34,11 @@ namespace Modelo.Dao
                 CREATE TABLE 'Persona' (
                 'idCedula'  INTEGER,
 	            'nombre'    TEXT NOT NULL,
-                'Nacionalidad' TEXT NOT NULL,
-	            'fecha_nacimineto'  TEXT NOT NULL,
+	            'edad'  NUMERIC NOT NULL,
+	            'fecha_nacimiento'  TEXT NOT NULL,
 	            'sexo'  TEXT NOT NULL,
 	            'cedula'    NUMERIC,
-                'Direccion' TEXT NOT NULL,
-                'Telefono' INTEGER,
-	             PRIMARY KEY('idCedula' AUTOINCREMENT)
+	            PRIMARY KEY('idCedula' AUTOINCREMENT)
             ); ";
             sqliteCommand = ConnectorSQLite.CreateConnection().CreateCommand();
             sqliteCommand.CommandText = createSQL;

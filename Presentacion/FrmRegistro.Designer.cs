@@ -48,9 +48,10 @@ namespace FaceId.Presentacion
             // btnCapture
             // 
             this.btnCapture.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapture.Location = new System.Drawing.Point(524, 197);
+            this.btnCapture.Location = new System.Drawing.Point(699, 242);
+            this.btnCapture.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapture.Name = "btnCapture";
-            this.btnCapture.Size = new System.Drawing.Size(92, 41);
+            this.btnCapture.Size = new System.Drawing.Size(122, 51);
             this.btnCapture.TabIndex = 2;
             this.btnCapture.Text = "Capturar";
             this.btnCapture.UseVisualStyleBackColor = true;
@@ -60,9 +61,10 @@ namespace FaceId.Presentacion
             // 
             this.btnRegistroForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroForm.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRegistroForm.Location = new System.Drawing.Point(524, 245);
+            this.btnRegistroForm.Location = new System.Drawing.Point(699, 301);
+            this.btnRegistroForm.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistroForm.Name = "btnRegistroForm";
-            this.btnRegistroForm.Size = new System.Drawing.Size(92, 32);
+            this.btnRegistroForm.Size = new System.Drawing.Size(122, 40);
             this.btnRegistroForm.TabIndex = 3;
             this.btnRegistroForm.Text = "Registrar";
             this.btnRegistroForm.UseVisualStyleBackColor = true;
@@ -70,17 +72,19 @@ namespace FaceId.Presentacion
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(524, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(699, 36);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(169, 162);
+            this.pictureBox2.Size = new System.Drawing.Size(225, 199);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // video
             // 
-            this.video.Location = new System.Drawing.Point(12, 29);
+            this.video.Location = new System.Drawing.Point(16, 36);
+            this.video.Margin = new System.Windows.Forms.Padding(4);
             this.video.Name = "video";
-            this.video.Size = new System.Drawing.Size(394, 282);
+            this.video.Size = new System.Drawing.Size(624, 327);
             this.video.TabIndex = 0;
             this.video.TabStop = false;
             // 
@@ -94,15 +98,14 @@ namespace FaceId.Presentacion
             this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(783, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1044, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.archivoToolStripMenuItem.Text = "Inicio";
             // 
             // archivoToolStripMenuItem1
@@ -110,13 +113,13 @@ namespace FaceId.Presentacion
             this.archivoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem});
             this.archivoToolStripMenuItem1.Name = "archivoToolStripMenuItem1";
-            this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(73, 24);
             this.archivoToolStripMenuItem1.Text = "Archivo";
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.nuevoToolStripMenuItem.Text = "Registro";
             // 
             // insertarToolStripMenuItem
@@ -124,32 +127,33 @@ namespace FaceId.Presentacion
             this.insertarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem1});
             this.insertarToolStripMenuItem.Name = "insertarToolStripMenuItem";
-            this.insertarToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.insertarToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.insertarToolStripMenuItem.Text = "Insertar";
             // 
             // nuevoToolStripMenuItem1
             // 
             this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.nuevoToolStripMenuItem1.Text = "Nuevo";
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.infoToolStripMenuItem.Text = "Info";
             // 
             // FrmRegistro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 323);
+            this.ClientSize = new System.Drawing.Size(1044, 398);
             this.Controls.Add(this.btnRegistroForm);
             this.Controls.Add(this.btnCapture);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.video);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRegistro";
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.FrmRegistro_Load);

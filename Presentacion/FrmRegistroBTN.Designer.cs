@@ -61,10 +61,9 @@ namespace FaceId.Presentacion
             this.btnGuardarREBTN.BackColor = System.Drawing.Color.Transparent;
             this.btnGuardarREBTN.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarREBTN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardarREBTN.Location = new System.Drawing.Point(446, 262);
-            this.btnGuardarREBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarREBTN.Location = new System.Drawing.Point(595, 323);
             this.btnGuardarREBTN.Name = "btnGuardarREBTN";
-            this.btnGuardarREBTN.Size = new System.Drawing.Size(128, 41);
+            this.btnGuardarREBTN.Size = new System.Drawing.Size(171, 50);
             this.btnGuardarREBTN.TabIndex = 74;
             this.btnGuardarREBTN.Text = "&Guardar";
             this.btnGuardarREBTN.UseVisualStyleBackColor = false;
@@ -74,10 +73,9 @@ namespace FaceId.Presentacion
             // 
             this.btnVolver.BackColor = System.Drawing.SystemColors.Control;
             this.btnVolver.Image = global::FaceId.Properties.Resources.flecha_correcta_c_;
-            this.btnVolver.Location = new System.Drawing.Point(49, 10);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Location = new System.Drawing.Point(65, 12);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(36, 32);
+            this.btnVolver.Size = new System.Drawing.Size(48, 39);
             this.btnVolver.TabIndex = 73;
             this.btnVolver.UseVisualStyleBackColor = false;
             // 
@@ -85,10 +83,9 @@ namespace FaceId.Presentacion
             // 
             this.btnRegresar.BackColor = System.Drawing.SystemColors.Control;
             this.btnRegresar.Image = global::FaceId.Properties.Resources.atras;
-            this.btnRegresar.Location = new System.Drawing.Point(9, 10);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegresar.Location = new System.Drawing.Point(12, 12);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(33, 32);
+            this.btnRegresar.Size = new System.Drawing.Size(44, 39);
             this.btnRegresar.TabIndex = 72;
             this.btnRegresar.UseVisualStyleBackColor = false;
             // 
@@ -96,10 +93,9 @@ namespace FaceId.Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(132, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(176, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 26);
+            this.label1.Size = new System.Drawing.Size(258, 32);
             this.label1.TabIndex = 71;
             this.label1.Text = "Registro de Datos";
             // 
@@ -107,10 +103,9 @@ namespace FaceId.Presentacion
             // 
             this.rdbFemenino.AutoSize = true;
             this.rdbFemenino.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbFemenino.Location = new System.Drawing.Point(314, 337);
-            this.rdbFemenino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbFemenino.Location = new System.Drawing.Point(419, 415);
             this.rdbFemenino.Name = "rdbFemenino";
-            this.rdbFemenino.Size = new System.Drawing.Size(115, 28);
+            this.rdbFemenino.Size = new System.Drawing.Size(143, 33);
             this.rdbFemenino.TabIndex = 70;
             this.rdbFemenino.TabStop = true;
             this.rdbFemenino.Text = "Femenino";
@@ -118,8 +113,7 @@ namespace FaceId.Presentacion
             // 
             // Calendario
             // 
-            this.Calendario.Location = new System.Drawing.Point(194, 550);
-            this.Calendario.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Calendario.Location = new System.Drawing.Point(272, 686);
             this.Calendario.Name = "Calendario";
             this.Calendario.TabIndex = 69;
             // 
@@ -127,10 +121,9 @@ namespace FaceId.Presentacion
             // 
             this.rdbMasculino.AutoSize = true;
             this.rdbMasculino.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbMasculino.Location = new System.Drawing.Point(194, 336);
-            this.rdbMasculino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbMasculino.Location = new System.Drawing.Point(258, 414);
             this.rdbMasculino.Name = "rdbMasculino";
-            this.rdbMasculino.Size = new System.Drawing.Size(114, 28);
+            this.rdbMasculino.Size = new System.Drawing.Size(143, 33);
             this.rdbMasculino.TabIndex = 68;
             this.rdbMasculino.TabStop = true;
             this.rdbMasculino.Text = "Masculino";
@@ -139,58 +132,52 @@ namespace FaceId.Presentacion
             // txtEdad
             // 
             this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.Location = new System.Drawing.Point(204, 392);
-            this.txtEdad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEdad.Location = new System.Drawing.Point(272, 483);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(92, 28);
+            this.txtEdad.Size = new System.Drawing.Size(121, 34);
             this.txtEdad.TabIndex = 67;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(204, 498);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccion.Location = new System.Drawing.Point(272, 613);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(218, 28);
+            this.txtDireccion.Size = new System.Drawing.Size(290, 34);
             this.txtDireccion.TabIndex = 66;
             // 
             // txtApellido
             // 
             this.txtApellido.BackColor = System.Drawing.SystemColors.Window;
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(204, 215);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Location = new System.Drawing.Point(272, 265);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(190, 28);
+            this.txtApellido.Size = new System.Drawing.Size(252, 34);
             this.txtApellido.TabIndex = 65;
             // 
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(204, 445);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Location = new System.Drawing.Point(272, 548);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(190, 28);
+            this.txtTelefono.Size = new System.Drawing.Size(252, 34);
             this.txtTelefono.TabIndex = 64;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(204, 157);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Location = new System.Drawing.Point(272, 193);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(190, 28);
+            this.txtNombre.Size = new System.Drawing.Size(252, 34);
             this.txtNombre.TabIndex = 63;
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(35, 217);
-            this.lblApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellido.Location = new System.Drawing.Point(47, 267);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(105, 26);
+            this.lblApellido.Size = new System.Drawing.Size(136, 32);
             this.lblApellido.TabIndex = 62;
             this.lblApellido.Text = "Apellido:";
             // 
@@ -198,10 +185,9 @@ namespace FaceId.Presentacion
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(32, 338);
-            this.lblSexo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSexo.Location = new System.Drawing.Point(43, 416);
             this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(73, 26);
+            this.lblSexo.Size = new System.Drawing.Size(93, 32);
             this.lblSexo.TabIndex = 61;
             this.lblSexo.Text = "Sexo:";
             // 
@@ -209,10 +195,9 @@ namespace FaceId.Presentacion
             // 
             this.lblEdad.AutoSize = true;
             this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(34, 394);
-            this.lblEdad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEdad.Location = new System.Drawing.Point(45, 485);
             this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(74, 26);
+            this.lblEdad.Size = new System.Drawing.Size(95, 32);
             this.lblEdad.TabIndex = 60;
             this.lblEdad.Text = "Edad:";
             // 
@@ -220,10 +205,9 @@ namespace FaceId.Presentacion
             // 
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(32, 550);
-            this.lblFechaNacimiento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(43, 677);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(139, 52);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(177, 64);
             this.lblFechaNacimiento.TabIndex = 59;
             this.lblFechaNacimiento.Text = "Fecha de\r\nNacimiento:\r\n";
             // 
@@ -231,10 +215,9 @@ namespace FaceId.Presentacion
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(32, 500);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDireccion.Location = new System.Drawing.Point(43, 615);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(119, 26);
+            this.lblDireccion.Size = new System.Drawing.Size(152, 32);
             this.lblDireccion.TabIndex = 58;
             this.lblDireccion.Text = "Direccion:";
             // 
@@ -242,10 +225,9 @@ namespace FaceId.Presentacion
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(33, 445);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTelefono.Location = new System.Drawing.Point(44, 548);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(110, 26);
+            this.lblTelefono.Size = new System.Drawing.Size(144, 32);
             this.lblTelefono.TabIndex = 57;
             this.lblTelefono.Text = "Telefono:";
             // 
@@ -253,18 +235,18 @@ namespace FaceId.Presentacion
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(35, 158);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(47, 195);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(103, 26);
+            this.lblNombre.Size = new System.Drawing.Size(130, 32);
             this.lblNombre.TabIndex = 56;
             this.lblNombre.Text = "Nombre:";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(446, 36);
+            this.pictureBox2.Location = new System.Drawing.Point(595, 44);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(169, 162);
+            this.pictureBox2.Size = new System.Drawing.Size(225, 199);
             this.pictureBox2.TabIndex = 75;
             this.pictureBox2.TabStop = false;
             // 
@@ -272,20 +254,18 @@ namespace FaceId.Presentacion
             // 
             this.txtCedula.BackColor = System.Drawing.SystemColors.Window;
             this.txtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(204, 98);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCedula.Location = new System.Drawing.Point(272, 120);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(190, 28);
+            this.txtCedula.Size = new System.Drawing.Size(252, 34);
             this.txtCedula.TabIndex = 77;
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(34, 99);
-            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblID.Location = new System.Drawing.Point(45, 122);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(94, 26);
+            this.lblID.Size = new System.Drawing.Size(121, 32);
             this.lblID.TabIndex = 76;
             this.lblID.Text = "Cedula:";
             // 
@@ -293,28 +273,26 @@ namespace FaceId.Presentacion
             // 
             this.txtNacionalidad.BackColor = System.Drawing.SystemColors.Window;
             this.txtNacionalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNacionalidad.Location = new System.Drawing.Point(204, 277);
-            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNacionalidad.Location = new System.Drawing.Point(272, 341);
             this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(190, 28);
+            this.txtNacionalidad.Size = new System.Drawing.Size(252, 34);
             this.txtNacionalidad.TabIndex = 79;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 279);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(44, 343);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 26);
+            this.label2.Size = new System.Drawing.Size(203, 32);
             this.label2.TabIndex = 78;
             this.label2.Text = "Nacionalidad:";
             // 
             // FrmRegistroBTN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 676);
+            this.ClientSize = new System.Drawing.Size(857, 964);
             this.Controls.Add(this.txtNacionalidad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCedula);
@@ -339,7 +317,6 @@ namespace FaceId.Presentacion
             this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmRegistroBTN";
             this.Text = "FrmRegistroBTN";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

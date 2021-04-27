@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace FaceId.Presentacion.Ventanas
 {
-    enum Ventana{ NoLogin, Login, Solicitud, Opciones, Ver }
+    enum Ventana{ NoLogin, Login, Solicitud }
     class Fabrica
     {
         public static UserControl getVentana(Ventana valor)
@@ -22,10 +22,6 @@ namespace FaceId.Presentacion.Ventanas
                     return new Login();
                 case Ventana.Solicitud:
                     return new VenSolicitud();
-                case Ventana.Opciones:
-                    return new Opciones();
-                case Ventana.Ver:
-                    return new Ver();
                 default:
                     return null;
             }

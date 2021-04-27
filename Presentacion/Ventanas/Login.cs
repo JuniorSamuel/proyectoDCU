@@ -21,7 +21,7 @@ namespace FaceId.Presentacion.Ventanas
         private void button1_Click(object sender, EventArgs e)
         {
             CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
-            frm.setVentana(Fabrica.getVentana(Ventana.Ver));
+            frm.setVentana(Fabrica.getVentana(Ventana.Solicitud));
         }
     }
 }
