@@ -125,14 +125,14 @@ namespace FaceId.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnSalirOP);
             this.Controls.Add(this.btnReporteOP);
             this.Controls.Add(this.btnSolicitarOP);
             this.Controls.Add(this.btnVerDatosOP);
             this.Controls.Add(this.btnRegistrarOP);
             this.Name = "Opciones";
-            this.Size = new System.Drawing.Size(545, 591);
+            this.Size = new System.Drawing.Size(578, 607);
             this.ResumeLayout(false);
 
         }

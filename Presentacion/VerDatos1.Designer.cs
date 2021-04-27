@@ -43,13 +43,13 @@ namespace FaceId.Presentacion
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblTelefonoVD = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.btnVolver = new System.Windows.Forms.Button();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.btnPDF = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.lblCedulaVD = new System.Windows.Forms.Label();
             this.lblNNVD = new System.Windows.Forms.Label();
             this.lblNacionalidadVD = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnPDF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label7
@@ -111,6 +111,7 @@ namespace FaceId.Presentacion
             this.lblFNFNVD.Size = new System.Drawing.Size(107, 44);
             this.lblFNFNVD.TabIndex = 65;
             this.lblFNFNVD.Text = "Fecha";
+            this.lblFNFNVD.Click += new System.EventHandler(this.lblFNFNVD_Click);
             // 
             // label1
             // 
@@ -192,40 +193,6 @@ namespace FaceId.Presentacion
             this.lblNombre.TabIndex = 57;
             this.lblNombre.Text = "Nombre:";
             // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.SystemColors.Control;
-            this.btnVolver.Image = global::FaceId.Properties.Resources.flecha_correcta_c_;
-            this.btnVolver.Location = new System.Drawing.Point(56, 12);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(48, 39);
-            this.btnVolver.TabIndex = 72;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRegresar.Image = global::FaceId.Properties.Resources.atras;
-            this.btnRegresar.Location = new System.Drawing.Point(3, 12);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(44, 39);
-            this.btnRegresar.TabIndex = 71;
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            // 
-            // btnPDF
-            // 
-            this.btnPDF.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPDF.Image = global::FaceId.Properties.Resources.pdf1;
-            this.btnPDF.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPDF.Location = new System.Drawing.Point(36, 757);
-            this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(227, 73);
-            this.btnPDF.TabIndex = 56;
-            this.btnPDF.Text = "Exportar a PDF";
-            this.btnPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnPDF.UseVisualStyleBackColor = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -265,6 +232,40 @@ namespace FaceId.Presentacion
             this.lblNacionalidadVD.Size = new System.Drawing.Size(211, 32);
             this.lblNacionalidadVD.TabIndex = 75;
             this.lblNacionalidadVD.Text = "Nacionalidad: ";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.SystemColors.Control;
+            this.btnVolver.Image = global::FaceId.Properties.Resources.flecha_correcta_c_;
+            this.btnVolver.Location = new System.Drawing.Point(56, 12);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(48, 39);
+            this.btnVolver.TabIndex = 72;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRegresar.Image = global::FaceId.Properties.Resources.atras;
+            this.btnRegresar.Location = new System.Drawing.Point(3, 12);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(44, 39);
+            this.btnRegresar.TabIndex = 71;
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            // 
+            // btnPDF
+            // 
+            this.btnPDF.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPDF.Image = global::FaceId.Properties.Resources.pdf1;
+            this.btnPDF.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPDF.Location = new System.Drawing.Point(36, 757);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(227, 73);
+            this.btnPDF.TabIndex = 56;
+            this.btnPDF.Text = "Exportar a PDF";
+            this.btnPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnPDF.UseVisualStyleBackColor = false;
             // 
             // VerDatos1
             // 

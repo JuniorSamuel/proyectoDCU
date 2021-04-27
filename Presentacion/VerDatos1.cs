@@ -22,5 +22,10 @@ namespace FaceId.Presentacion
             DatosPDF PDF = new DatosPDF();
             
         }
+
+        private void lblFNFNVD_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

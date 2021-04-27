@@ -3,6 +3,7 @@ using Emgu.CV.CvEnum;
 using Emgu.CV.Face;
 using Emgu.CV.Structure;
 using FaceId.Modelo.Entidades;
+using FaceId.Presentacion;
 using FaceId.Presentacion.Ventanas;
 using Modelo.Dao;
 using System;
@@ -83,7 +84,7 @@ namespace FaceId.Control
 
         private void init(object sender, EventArgs e)
         {
-            setVentana(Fabrica.getVentana(Ventana.NoLogin));
+            setVentana(new Opciones());
         }
 
         public void setVentana(UserControl panel)
