@@ -23,6 +23,7 @@ namespace FaceId.Control
         //Ventana
         private static CtlFrmInicio Frm = null;
         FrmInicio frmInicio;
+        public static Persona user = null;
 
         #region Variables
         int testid = 0;
@@ -73,7 +74,7 @@ namespace FaceId.Control
 
         private void timer_tick(object sender, EventArgs e)
         {
-            setVentana(Fabrica.getVentana(Ventana.NoLogin));
+            //setVentana(Fabrica.getVentana(Ventana.NoLogin));
             i = true;
         }
 

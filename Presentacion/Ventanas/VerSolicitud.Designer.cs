@@ -1,7 +1,7 @@
 ﻿
 namespace FaceId.Presentacion.Ventanas
 {
-    partial class VenSolicitud
+    partial class VerSolicitud
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -31,13 +31,12 @@ namespace FaceId.Presentacion.Ventanas
         {
             this.SuspendLayout();
             // 
-            // VenSolicitud
+            // VerSolicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Name = "VenSolicitud";
-            this.Size = new System.Drawing.Size(482, 362);
+            this.Name = "VerSolicitud";
+            this.Size = new System.Drawing.Size(590, 445);
             this.ResumeLayout(false);
 
         }

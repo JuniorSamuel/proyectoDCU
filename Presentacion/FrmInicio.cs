@@ -16,6 +16,7 @@ using AForge.Video.DirectShow;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using FaceId.Control;
+using FaceId.Presentacion.Ventanas;
 
 namespace FaceId
 {
@@ -25,6 +26,12 @@ namespace FaceId
         {
             InitializeComponent();
             CtlFrmInicio frmInicio = CtlFrmInicio.getCtlFrmInicio(this);
+        }
+
+        private void bnRegistro_Click(object sender, EventArgs e)
+        {
+            CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
+            frm.setVentana(Fabrica.getVentana(Ventana.Registro));
         }
     }
 }

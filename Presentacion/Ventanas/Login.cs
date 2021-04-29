@@ -23,5 +23,23 @@ namespace FaceId.Presentacion.Ventanas
             CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
             frm.setVentana(Fabrica.getVentana(Ventana.Solicitud));
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
+            frm.setVentana(Fabrica.getVentana(Ventana.Solicitud));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
+            frm.setVentana(Fabrica.getVentana(Ventana.Reporte));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
+            frm.setVentana(Fabrica.getVentana(Ventana.VerSolicitud));
+        }
     }
 }

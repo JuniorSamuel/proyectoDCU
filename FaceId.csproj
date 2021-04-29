@@ -117,6 +117,7 @@
     <Compile Include="Control\CtlFrmRegistro.cs" />
     <Compile Include="Control\IObserver\IObservador.cs" />
     <Compile Include="Control\IObserver\IObervables.cs" />
+    <Compile Include="Control\Mensajes.cs" />
     <Compile Include="DatosPDF.cs" />
     <Compile Include="Modelo\base de datos\ConnectorSQLite.cs" />
     <Compile Include="Modelo\base de datos\ImagenDto.cs" />
@@ -147,13 +148,30 @@
     <Compile Include="Presentacion\Opciones.Designer.cs">
       <DependentUpon>Opciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Ventanas\Captural.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\Captural.Designer.cs">
+      <DependentUpon>Captural.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Ventanas\Fabrica.cs" />
-    <Compile Include="Presentacion\Ventanas\Interface1.cs" />
     <Compile Include="Presentacion\Ventanas\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentacion\Ventanas\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\Registro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\Reporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Ventanas\Solicitudes.cs">
       <SubType>Form</SubType>
@@ -161,17 +179,18 @@
     <Compile Include="Presentacion\Ventanas\Solicitudes.Designer.cs">
       <DependentUpon>Solicitudes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Ventanas\VenSolicitud.cs">
+    <Compile Include="Presentacion\Ventanas\Solicitud.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentacion\Ventanas\VenSolicitud.Designer.cs">
-      <DependentUpon>VenSolicitud.cs</DependentUpon>
+    <Compile Include="Presentacion\Ventanas\Solicitud.Designer.cs">
+      <DependentUpon>Solicitud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Ventanas\VenNoLogin.cs">
+    <Compile Include="Presentacion\Ventanas\NoLogin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentacion\Ventanas\VenNoLogin.Designer.cs">
-      <DependentUpon>VenNoLogin.cs</DependentUpon>
+    <Compile Include="Presentacion\Ventanas\.Designer.cs">
+      <DependentUpon>NoLogin.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentacion\FrmInicio.cs">
       <SubType>Form</SubType>
@@ -184,6 +203,18 @@
     </Compile>
     <Compile Include="Presentacion\FrmRegistro.Designer.cs">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\Ver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\Ver.Designer.cs">
+      <DependentUpon>Ver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\VerSolicitud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\VerSolicitud.Designer.cs">
+      <DependentUpon>VerSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\VerDatos1.cs">
       <SubType>Form</SubType>
@@ -218,17 +249,32 @@
     <EmbeddedResource Include="Presentacion\Opciones.resx">
       <DependentUpon>Opciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventanas\Captural.resx">
+      <DependentUpon>Captural.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventanas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventanas\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventanas\Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventanas\Solicitudes.resx">
       <DependentUpon>Solicitudes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Ventanas\VenSolicitud.resx">
-      <DependentUpon>VenSolicitud.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Ventanas\Solicitud.resx">
+      <DependentUpon>Solicitud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Ventanas\VenNoLogin.resx">
-      <DependentUpon>VenNoLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Ventanas\NoLogin.resx">
+      <DependentUpon>NoLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventanas\Ver.resx">
+      <DependentUpon>Ver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventanas\VerSolicitud.resx">
+      <DependentUpon>VerSolicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\VerDatos1.resx">
       <DependentUpon>VerDatos1.cs</DependentUpon>

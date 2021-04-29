@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FaceId.Control.Ventanas
 {
-    public partial class VenNoLogin : UserControl
+    public partial class NoLogin : UserControl
     {
-        public VenNoLogin()
+        public NoLogin()
         {
             InitializeComponent();
         }

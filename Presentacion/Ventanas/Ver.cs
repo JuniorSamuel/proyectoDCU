@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FaceId.Presentacion.Ventanas
 {
-    public partial class VenSolicitud : UserControl
+    public partial class Ver : UserControl
     {
-        public VenSolicitud()
+        public Ver()
         {
             InitializeComponent();
         }
