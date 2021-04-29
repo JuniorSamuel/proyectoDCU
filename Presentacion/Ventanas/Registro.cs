@@ -22,16 +22,19 @@ namespace FaceId.Presentacion.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CtlFrmInicio.user = new Persona
+            PersonaDto db = new PersonaDto();
+            db.setPersona( new Persona
             {
                 cedula = Int32.Parse(txtCedula.Text),
                 nombre = txtNombre.Text,
                 sexo = getSexo(),
-                fecha_nacimiento = Calendario.SelectionRange.ToString(),
+                fecha_nacimiento = Calendario.SelectionRange.Start.ToString(),
                 nacionalidad = txtNacionalidad.Text,
-                telefono = Int32.Parse(txtTelefono.Text)
-            };            
-            
+                telefono = Int32.Parse(txtTelefono.Text),
+                direccion = txtDireccion.Text
+            });
+
+            CtlFrmInicio.user.cedula = Int32.Parse(txtCedula.Text);
             CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
             frm.setVentana(Fabrica.getVentana(Ventana.Captural));
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FaceId.Modelo.base_de_datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace FaceId.Presentacion.Ventanas
         public VerSolicitud()
         {
             InitializeComponent();
+            RegistroSolicitudDto db = new RegistroSolicitudDto();
+            dataGridView1.DataSource = db.verRegistro();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
+        }
+
+        private void registroSolicitudDtoBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

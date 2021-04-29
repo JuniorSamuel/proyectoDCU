@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace FaceId.Modelo.Entidades
         public string sexo { get; set; }
         public int telefono { get; set; }
         public string direccion { get; set; }
-        public Imagen imagen { get; set; }
+        public Bitmap imagen { get; set; }
 
         public Persona()
         {
@@ -32,6 +33,11 @@ namespace FaceId.Modelo.Entidades
             this.sexo = sexo;
             this.nacionalidad = nacionalidad;
             this.telefono = telefono;
-        }                
+        }
+        
+        public string ToString()
+        {
+            return "id: " + idPersona + " cedula: " + cedula+" nombre: " + nombre + " nacionalidad: "+nacionalidad +" fecha:" + fecha_nacimiento + " sexo: " + sexo + " telefono:" + telefono + " direccion: " + direccion;
+        }
     }
 }

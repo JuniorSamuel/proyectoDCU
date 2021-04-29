@@ -122,8 +122,12 @@
     <Compile Include="Modelo\base de datos\ConnectorSQLite.cs" />
     <Compile Include="Modelo\base de datos\ImagenDto.cs" />
     <Compile Include="Modelo\base de datos\PersonaDto.cs" />
+    <Compile Include="Modelo\base de datos\RegistroSolicitudDto.cs" />
+    <Compile Include="Modelo\base de datos\ServicioDto.cs" />
     <Compile Include="Modelo\Entidades\Imagen.cs" />
     <Compile Include="Modelo\Entidades\Persona.cs" />
+    <Compile Include="Modelo\Entidades\RegistroSolicitud.cs" />
+    <Compile Include="Modelo\Entidades\Servicio.cs" />
     <Compile Include="Presentacion\FrmRegistroBTN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +208,18 @@
     <Compile Include="Presentacion\FrmRegistro.Designer.cs">
       <DependentUpon>FrmRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Ventanas\subVentanas\ActaNacimiento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\subVentanas\ActaNacimiento.Designer.cs">
+      <DependentUpon>ActaNacimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\subVentanas\SelecSolicitud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Ventanas\subVentanas\SelecSolicitud.Designer.cs">
+      <DependentUpon>SelecSolicitud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Ventanas\Ver.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +286,12 @@
     <EmbeddedResource Include="Presentacion\Ventanas\NoLogin.resx">
       <DependentUpon>NoLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventanas\subVentanas\ActaNacimiento.resx">
+      <DependentUpon>ActaNacimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Ventanas\subVentanas\SelecSolicitud.resx">
+      <DependentUpon>SelecSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Ventanas\Ver.resx">
       <DependentUpon>Ver.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +313,7 @@
     <None Include="Modelo\base de datos\DatabaseFaceId.db" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FaceId.Modelo.base_de_datos.RegistroSolicitudDto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -312,6 +335,10 @@
   <ItemGroup>
     <Content Include="haarcascade_frontalface_default.xml" />
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\ariiba.png" />
+    <None Include="Resources\application-form.png" />
+    <None Include="Resources\rosto.png" />
+    <None Include="Resources\rostro.jpg" />
     <None Include="Resources\registro %281%29.png" />
     <None Include="Resources\datos1.png" />
     <None Include="Resources\datos.png" />

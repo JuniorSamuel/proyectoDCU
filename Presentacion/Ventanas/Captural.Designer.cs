@@ -31,9 +31,8 @@ namespace FaceId.Presentacion.Ventanas
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.pic = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -70,42 +69,27 @@ namespace FaceId.Presentacion.Ventanas
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // pic
+            // pictureBox1
             // 
-            this.pic.Location = new System.Drawing.Point(71, 43);
-            this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(273, 268);
-            this.pic.TabIndex = 105;
-            this.pic.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(380, 162);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 38);
-            this.button2.TabIndex = 103;
-            this.button2.Text = "Captural";
-            this.button2.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = global::FaceId.Properties.Resources.rosto;
+            this.pictureBox1.Location = new System.Drawing.Point(141, 66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 252);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 105;
+            this.pictureBox1.TabStop = false;
             // 
             // Captural
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pic);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Name = "Captural";
             this.Size = new System.Drawing.Size(590, 445);
-            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,7 +98,6 @@ namespace FaceId.Presentacion.Ventanas
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
-        public System.Windows.Forms.PictureBox pic;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

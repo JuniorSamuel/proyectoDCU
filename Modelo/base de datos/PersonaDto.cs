@@ -23,18 +23,28 @@ namespace FaceId.Modelo.base_de_datos
 
         public void setPersona(Persona perosna)
         {
-            SQLiteConnection conn = ConnectorSQLite.CreateConnection();
-            SQLiteCommand sqliteCommand;
-            sqliteCommand = conn.CreateCommand();
-            sqliteCommand.CommandText = @"INSERT INTO Persona( idCedula, nombre, fecha_nacimineto, fecha_nacimineto, sexo, Direccion, Telefono) VALUES (" +
-                "'" + perosna.cedula + "', " +
-                ""  + perosna.nombre + ", " +
-                ""  + perosna.nacionalidad + ", " +
-                "'" + perosna.fecha_nacimiento + "', " +
-                "'" + perosna.sexo + "," +
-                ""  + perosna.telefono + ");";
-            sqliteCommand.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                System.Windows.Forms.MessageBox.Show(perosna.ToString());
+                SQLiteConnection conn = ConnectorSQLite.CreateConnection();
+                SQLiteCommand sqliteCommand;
+                sqliteCommand = conn.CreateCommand();
+                sqliteCommand.CommandText = @"INSERT INTO Persona( 
+                    Cedula, Nombre, Nacionalidad, Fecha_nacimineto, 
+                    Sexo, Direccion, Telefono) VALUES (
+                    " + perosna.cedula + 
+                    ", '" + perosna.nombre+"'" +
+                    ", '" + perosna.nacionalidad+"'" +
+                    ", '" + perosna.fecha_nacimiento + "'"+
+                    ", '" + perosna.sexo + "'"+
+                    ", '" + perosna.direccion +"'" +
+                    ",  " + perosna.telefono +");";
+                int var = sqliteCommand.ExecuteNonQuery();
+                conn.Close();
+            }catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Error insert persona:" + ex.Message);
+            }
         }
 
         public Persona getPerosna(int cedula)
@@ -43,7 +53,7 @@ namespace FaceId.Modelo.base_de_datos
             SQLiteCommand command;
             SQLiteDataReader reader;
             command = conn.CreateCommand();
-            command.CommandText = "select * from Persona where cedula = " + cedula + "; ";
+            command.CommandText = "select * from Persona where Cedula = " + cedula + "; ";
             reader = command.ExecuteReader();
             if (reader.Read())
                 perosna = new Persona{
@@ -55,12 +65,11 @@ namespace FaceId.Modelo.base_de_datos
                     cedula = reader.GetInt32(5),
                     direccion = reader.GetString(6),
                     telefono = reader.GetInt32(7)
-                };
+                };            
             else
             {
                 perosna = null;
             }
-
             return perosna;
             conn.Close();
         }

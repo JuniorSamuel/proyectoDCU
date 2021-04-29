@@ -2,6 +2,7 @@
 using Emgu.CV.CvEnum;
 using Emgu.CV.Face;
 using Emgu.CV.Structure;
+using FaceId.Modelo.base_de_datos;
 using FaceId.Modelo.Entidades;
 using FaceId.Presentacion;
 using FaceId.Presentacion.Ventanas;
@@ -23,7 +24,8 @@ namespace FaceId.Control
         //Ventana
         private static CtlFrmInicio Frm = null;
         FrmInicio frmInicio;
-        public static Persona user = null;
+        public static Persona user = new Persona();
+        public static bool captu = false;
 
         #region Variables
         int testid = 0;
@@ -85,7 +87,7 @@ namespace FaceId.Control
 
         private void init(object sender, EventArgs e)
         {
-            setVentana(new Opciones());
+            setVentana(Fabrica.getVentana(Ventana.NoLogin));
         }
 
         public void setVentana(UserControl panel)
@@ -141,32 +143,22 @@ namespace FaceId.Control
                             //---picDetected.SizeMode = PictureBoxSizeMode.StretchImage;
                             //---picDetected.Image = resultImage.Bitmap;
 
-                            if (EnableSaveImage)
+                            if (CtlFrmInicio.captu)
                             {
+                                
                                 //We will create a directory if does not exists!
                                 string path = Directory.GetCurrentDirectory() + @"\imagenes";
                                 if (!Directory.Exists(path))
                                     Directory.CreateDirectory(path);
                                 //we will save 10 images with delay a second for each image 
                                 //to avoid hang GUI we will create a new task
-                                Task.Factory.StartNew(() => {
-                                    for (int i = 0; i < 10; i++)
-                                    {
-                                        //resize the image then saving it
-                                        //resultImage.Resize(200, 200, Inter.Cubic).Save(path + @"\" + txtPersonName.Text + "_" + DateTime.Now.ToString("dd-mm-yyyy-hh-mm-ss") + ".jpg");
-                                        Thread.Sleep(1000);
-                                    }
-                                });
+                                
+                                    
+                                resultImage.Resize(200, 200, Inter.Cubic).Save(path + @"\" + CtlFrmInicio.user.cedula + "_" + DateTime.Now.ToString("dd-mm-yyyy-hh-mm-ss") + ".jpg");
+                                     
 
                             }
-                            EnableSaveImage = false;
-
-                            //if (btnAddPerson.InvokeRequired)
-                            //{
-                            //    btnAddPerson.Invoke(new ThreadStart(delegate {
-                            //        btnAddPerson.Enabled = true;
-                            //    }));
-                            //}
+                            CtlFrmInicio.captu = false;
 
                             // Step 5: Recognize the face 
                             if (TrainImagesFromDir())
@@ -175,7 +167,7 @@ namespace FaceId.Control
                                 CvInvoke.EqualizeHist(grayFaceResult, grayFaceResult);
                                 var result = recognizer.Predict(grayFaceResult);
                                 //pictureBox1.Image = grayFaceResult.Bitmap;
-                                //pictureBox2.Image = TrainedFaces[result.Label].Bitmap;
+                                //CtlFrmInicio.user.imagen = TrainedFaces[result.Label].Bitmap;
                                 Debug.WriteLine(result.Label + ". " + result.Distance);
                                 //Here results found known faces
                                 if (result.Label != -1 && result.Distance < 1000)
@@ -239,29 +231,21 @@ namespace FaceId.Control
                     Debug.WriteLine(ImagesCount + ". " + name);
 
                 }
-
+                
                 if (TrainedFaces.Count() > 0)
-                {
-                    //frmInicio.labInformacion.Text = TrainedFaces.Count().ToString();                   
+                {                 
                     recognizer = new EigenFaceRecognizer(ImagesCount, Threshold);
-                    recognizer.Train(TrainedFaces.ToArray(), PersonsLabes.ToArray());
-                   
+                    recognizer.Train(TrainedFaces.ToArray(), PersonsLabes.ToArray());                   
                     frmInicio.timer1.Start();
-                        
-                    //PersonaDto dbPersona = new PersonaDto();
-                    //persona = new Persona();
-                    //persona = dbPersona.getPerosna(Int32.Parse(name));
-                        
-                        
+                                          
                     if ( i ||idLogin != name)
                     {
+                        PersonaDto dbPersona = new PersonaDto();                        
+                        CtlFrmInicio.user = dbPersona.getPerosna(Int32.Parse(name));
                         setVentana(Fabrica.getVentana(Ventana.Login));
                         idLogin = name;
                         i = false;                        
-                    }                                 
-                    
-                    //Debug.WriteLine(ImagesCount);
-                    //Debug.WriteLine(isTrained);
+                    }                                
                     return true;
                 }
                 else

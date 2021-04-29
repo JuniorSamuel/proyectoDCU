@@ -1,4 +1,5 @@
 ﻿using FaceId.Control.Ventanas;
+using FaceId.Presentacion.Ventanas.subVentanas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace FaceId.Presentacion.Ventanas
         VerSolicitud, 
         Registro,
         Ver,
-        Captural
+        Captural,
+        selectSolicitud,
+        ActaNacimiento
     }
     class Fabrica
     {
@@ -41,6 +44,10 @@ namespace FaceId.Presentacion.Ventanas
                     return new Ver();
                 case Ventana.Captural:
                     return new Captural();
+                case Ventana.selectSolicitud:
+                    return new SelecSolicitud();
+                case Ventana.ActaNacimiento:
+                    return new ActaNacimiento();
                 default:
                     return null;
             }

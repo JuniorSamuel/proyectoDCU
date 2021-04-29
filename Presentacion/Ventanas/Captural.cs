@@ -18,20 +18,20 @@ namespace FaceId.Presentacion.Ventanas
         public Captural()
         {
             InitializeComponent();
+            CtlFrmInicio.captu = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             if (Mensajes.getMensajeCancelar())
-            {
+            { 
                 CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
                 frm.setVentana(Fabrica.getVentana(Ventana.Registro));
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            //CtlFrmInicio.user.imagen = pic.Select.;
+        {                     
             PersonaDto db = new PersonaDto();
             db.setPersona(CtlFrmInicio.user);
         }

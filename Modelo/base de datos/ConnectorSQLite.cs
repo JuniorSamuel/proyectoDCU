@@ -16,12 +16,11 @@ namespace Modelo.Dao
             sqliteConn = new SQLiteConnection("Data Source = DatabaseFaceId.db;");
             try
             {
-
                 sqliteConn.Open();
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                System.Windows.Forms.MessageBox.Show(ex.Message + "Ok.");
             }
             return sqliteConn;
         }
@@ -32,17 +31,33 @@ namespace Modelo.Dao
             SQLiteCommand sqliteCommand;
             string createSQL = @"
                 CREATE TABLE 'Persona' (
-                'idCedula'  INTEGER,
-	            'nombre'    TEXT NOT NULL,
-	            'Nacionalidad'  TEXT NOT NULL,
-	            'fecha_nacimineto'  TEXT NOT NULL,
-	            'sexo'  TEXT NOT NULL,
-	            'cedula'   INTEGER NOT NULL UNIQUE,
-                'Direccion' TEXT NOT NULL,
+	            'idCedula' INTEGER PRIMARY KEY AUTOINCREMENT,
+	            'Nombre' TEXT,
+	            'Nacionalidad' TEXT,
+	            'Fecha_nacimineto'  TEXT,
+	            'Sexo'  TEXT,
+	            'Cedula'   INTEGER,
+	            'Direccion' TEXT,
 	            'Telefono'  INTEGER,
-	            'Imagen'    BLOB,
-	            PRIMARY KEY('idCedula','idCedula' AUTOINCREMENT)
-            ); ";
+	            'Imagen'    BLOB
+                 ); 
+
+                 CREATE TABLE 'Servicio' (
+                'idServicio'    INTEGER PRIMARY KEY AUTOINCREMENT,
+	            'Nombre'   TEXT NOT NULL
+                 );
+
+                INSERT INTO Servicio(Nombre) VALUES 
+                ('Acta de nacimineto');
+
+                CREATE TABLE 'RegistroSolicitud' (
+                'idRegistro'   INTEGER PRIMARY KEY AUTOINCREMENT,
+	            'Solicitud' TEXT,
+	            'idPersona' INTEGER NOT NULL,
+	            'Fecha_Solicitud'   TEXT,
+	            'Estado'    TEXT,
+                'Descripcion' TEXT);
+            ";
             sqliteCommand = ConnectorSQLite.CreateConnection().CreateCommand();
             sqliteCommand.CommandText = createSQL;
             try

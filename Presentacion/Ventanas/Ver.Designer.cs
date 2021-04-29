@@ -29,16 +29,15 @@ namespace FaceId.Presentacion.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNNVD = new System.Windows.Forms.Label();
+            this.labNacionalidad = new System.Windows.Forms.Label();
             this.lblNacionalidadVD = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblCedulaVD = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblSSVD = new System.Windows.Forms.Label();
-            this.lblTTVD = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblFNFNVD = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labCedula = new System.Windows.Forms.Label();
+            this.labApellido = new System.Windows.Forms.Label();
+            this.labSexo = new System.Windows.Forms.Label();
+            this.labTelefono = new System.Windows.Forms.Label();
+            this.labDireccion = new System.Windows.Forms.Label();
+            this.labFecha = new System.Windows.Forms.Label();
+            this.labNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblSexoVD = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
@@ -48,19 +47,20 @@ namespace FaceId.Presentacion.Ventanas
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblCedulaVD = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblNNVD
+            // labNacionalidad
             // 
-            this.lblNNVD.AutoEllipsis = true;
-            this.lblNNVD.AutoSize = true;
-            this.lblNNVD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNNVD.Location = new System.Drawing.Point(239, 160);
-            this.lblNNVD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNNVD.Name = "lblNNVD";
-            this.lblNNVD.Size = new System.Drawing.Size(98, 21);
-            this.lblNNVD.TabIndex = 94;
-            this.lblNNVD.Text = "nacionalidad";
+            this.labNacionalidad.AutoEllipsis = true;
+            this.labNacionalidad.AutoSize = true;
+            this.labNacionalidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNacionalidad.Location = new System.Drawing.Point(239, 160);
+            this.labNacionalidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labNacionalidad.Name = "labNacionalidad";
+            this.labNacionalidad.Size = new System.Drawing.Size(98, 21);
+            this.labNacionalidad.TabIndex = 94;
+            this.labNacionalidad.Text = "nacionalidad";
             // 
             // lblNacionalidadVD
             // 
@@ -75,101 +75,88 @@ namespace FaceId.Presentacion.Ventanas
             this.lblNacionalidadVD.TabIndex = 93;
             this.lblNacionalidadVD.Text = "Nacionalidad: ";
             // 
-            // label8
+            // labCedula
             // 
-            this.label8.AutoEllipsis = true;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(239, 66);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 21);
-            this.label8.TabIndex = 92;
-            this.label8.Text = "cedula";
+            this.labCedula.AutoEllipsis = true;
+            this.labCedula.AutoSize = true;
+            this.labCedula.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCedula.Location = new System.Drawing.Point(239, 66);
+            this.labCedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labCedula.Name = "labCedula";
+            this.labCedula.Size = new System.Drawing.Size(55, 21);
+            this.labCedula.TabIndex = 92;
+            this.labCedula.Text = "cedula";
             // 
-            // lblCedulaVD
+            // labApellido
             // 
-            this.lblCedulaVD.AutoSize = true;
-            this.lblCedulaVD.BackColor = System.Drawing.Color.Transparent;
-            this.lblCedulaVD.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedulaVD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.lblCedulaVD.Location = new System.Drawing.Point(62, 66);
-            this.lblCedulaVD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCedulaVD.Name = "lblCedulaVD";
-            this.lblCedulaVD.Size = new System.Drawing.Size(64, 21);
-            this.lblCedulaVD.TabIndex = 91;
-            this.lblCedulaVD.Text = "Cédula:";
+            this.labApellido.AutoEllipsis = true;
+            this.labApellido.AutoSize = true;
+            this.labApellido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labApellido.Location = new System.Drawing.Point(239, 129);
+            this.labApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labApellido.Name = "labApellido";
+            this.labApellido.Size = new System.Drawing.Size(65, 21);
+            this.labApellido.TabIndex = 90;
+            this.labApellido.Text = "apellido";
             // 
-            // label7
+            // labSexo
             // 
-            this.label7.AutoEllipsis = true;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(239, 129);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 21);
-            this.label7.TabIndex = 90;
-            this.label7.Text = "apellido";
+            this.labSexo.AutoSize = true;
+            this.labSexo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labSexo.Location = new System.Drawing.Point(239, 191);
+            this.labSexo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labSexo.Name = "labSexo";
+            this.labSexo.Size = new System.Drawing.Size(41, 21);
+            this.labSexo.TabIndex = 89;
+            this.labSexo.Text = "sexo";
             // 
-            // lblSSVD
+            // labTelefono
             // 
-            this.lblSSVD.AutoSize = true;
-            this.lblSSVD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSSVD.Location = new System.Drawing.Point(239, 191);
-            this.lblSSVD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSSVD.Name = "lblSSVD";
-            this.lblSSVD.Size = new System.Drawing.Size(41, 21);
-            this.lblSSVD.TabIndex = 89;
-            this.lblSSVD.Text = "sexo";
+            this.labTelefono.AutoEllipsis = true;
+            this.labTelefono.AutoSize = true;
+            this.labTelefono.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTelefono.Location = new System.Drawing.Point(239, 218);
+            this.labTelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labTelefono.Name = "labTelefono";
+            this.labTelefono.Size = new System.Drawing.Size(67, 21);
+            this.labTelefono.TabIndex = 87;
+            this.labTelefono.Text = "telefono";
             // 
-            // lblTTVD
+            // labDireccion
             // 
-            this.lblTTVD.AutoEllipsis = true;
-            this.lblTTVD.AutoSize = true;
-            this.lblTTVD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTTVD.Location = new System.Drawing.Point(239, 218);
-            this.lblTTVD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTTVD.Name = "lblTTVD";
-            this.lblTTVD.Size = new System.Drawing.Size(67, 21);
-            this.lblTTVD.TabIndex = 87;
-            this.lblTTVD.Text = "telefono";
+            this.labDireccion.AutoEllipsis = true;
+            this.labDireccion.AutoSize = true;
+            this.labDireccion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDireccion.Location = new System.Drawing.Point(239, 249);
+            this.labDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labDireccion.Name = "labDireccion";
+            this.labDireccion.Size = new System.Drawing.Size(73, 21);
+            this.labDireccion.TabIndex = 86;
+            this.labDireccion.Text = "direccion";
             // 
-            // label3
+            // labFecha
             // 
-            this.label3.AutoEllipsis = true;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(239, 249);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 21);
-            this.label3.TabIndex = 86;
-            this.label3.Text = "direccion";
+            this.labFecha.AutoEllipsis = true;
+            this.labFecha.AutoSize = true;
+            this.labFecha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFecha.Location = new System.Drawing.Point(239, 275);
+            this.labFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labFecha.Name = "labFecha";
+            this.labFecha.Size = new System.Drawing.Size(50, 21);
+            this.labFecha.TabIndex = 85;
+            this.labFecha.Text = "Fecha";
             // 
-            // lblFNFNVD
+            // labNombre
             // 
-            this.lblFNFNVD.AutoEllipsis = true;
-            this.lblFNFNVD.AutoSize = true;
-            this.lblFNFNVD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFNFNVD.Location = new System.Drawing.Point(239, 275);
-            this.lblFNFNVD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblFNFNVD.Name = "lblFNFNVD";
-            this.lblFNFNVD.Size = new System.Drawing.Size(50, 21);
-            this.lblFNFNVD.TabIndex = 85;
-            this.lblFNFNVD.Text = "Fecha";
-            // 
-            // label1
-            // 
-            this.label1.AutoEllipsis = true;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(239, 95);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 21);
-            this.label1.TabIndex = 84;
-            this.label1.Text = "nombre";
+            this.labNombre.AutoEllipsis = true;
+            this.labNombre.AutoSize = true;
+            this.labNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNombre.Location = new System.Drawing.Point(239, 95);
+            this.labNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labNombre.Name = "labNombre";
+            this.labNombre.Size = new System.Drawing.Size(65, 21);
+            this.labNombre.TabIndex = 84;
+            this.labNombre.Text = "nombre";
             // 
             // lblApellido
             // 
@@ -266,7 +253,7 @@ namespace FaceId.Presentacion.Ventanas
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(83)))), ((int)(((byte)(0)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,14 +262,14 @@ namespace FaceId.Presentacion.Ventanas
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 42);
             this.button1.TabIndex = 96;
-            this.button1.Text = "Guardar";
+            this.button1.Text = "Imprimir";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(83)))), ((int)(((byte)(0)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(10)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,6 +280,20 @@ namespace FaceId.Presentacion.Ventanas
             this.button2.TabIndex = 96;
             this.button2.Text = "Atras";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblCedulaVD
+            // 
+            this.lblCedulaVD.AutoSize = true;
+            this.lblCedulaVD.BackColor = System.Drawing.Color.Transparent;
+            this.lblCedulaVD.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedulaVD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblCedulaVD.Location = new System.Drawing.Point(62, 66);
+            this.lblCedulaVD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCedulaVD.Name = "lblCedulaVD";
+            this.lblCedulaVD.Size = new System.Drawing.Size(64, 21);
+            this.lblCedulaVD.TabIndex = 91;
+            this.lblCedulaVD.Text = "Cédula:";
             // 
             // Ver
             // 
@@ -303,16 +304,16 @@ namespace FaceId.Presentacion.Ventanas
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblNNVD);
+            this.Controls.Add(this.labNacionalidad);
             this.Controls.Add(this.lblNacionalidadVD);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labCedula);
             this.Controls.Add(this.lblCedulaVD);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblSSVD);
-            this.Controls.Add(this.lblTTVD);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblFNFNVD);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labApellido);
+            this.Controls.Add(this.labSexo);
+            this.Controls.Add(this.labTelefono);
+            this.Controls.Add(this.labDireccion);
+            this.Controls.Add(this.labFecha);
+            this.Controls.Add(this.labNombre);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblSexoVD);
             this.Controls.Add(this.label4);
@@ -328,16 +329,15 @@ namespace FaceId.Presentacion.Ventanas
 
         #endregion
 
-        private System.Windows.Forms.Label lblNNVD;
+        private System.Windows.Forms.Label labNacionalidad;
         private System.Windows.Forms.Label lblNacionalidadVD;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblCedulaVD;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblSSVD;
-        private System.Windows.Forms.Label lblTTVD;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblFNFNVD;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labCedula;
+        private System.Windows.Forms.Label labApellido;
+        private System.Windows.Forms.Label labSexo;
+        private System.Windows.Forms.Label labTelefono;
+        private System.Windows.Forms.Label labDireccion;
+        private System.Windows.Forms.Label labFecha;
+        private System.Windows.Forms.Label labNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblSexoVD;
         private System.Windows.Forms.Label lblDireccion;
@@ -347,5 +347,6 @@ namespace FaceId.Presentacion.Ventanas
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblCedulaVD;
     }
 }

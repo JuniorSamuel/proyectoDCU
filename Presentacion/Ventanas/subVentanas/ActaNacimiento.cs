@@ -11,11 +11,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FaceId.Presentacion.Ventanas
+namespace FaceId.Presentacion.Ventanas.subVentanas
 {
-    public partial class Reporte : UserControl
+    public partial class ActaNacimiento : UserControl
     {
-        public Reporte()
+        public ActaNacimiento()
         {
             InitializeComponent();
         }
@@ -36,21 +36,23 @@ namespace FaceId.Presentacion.Ventanas
 
             registroSolicitud.solicitd = getTipo();
             registroSolicitud.idPersona = CtlFrmInicio.user.idPersona;
-            registroSolicitud.descripcion = txtDescripcion.Text;
-
+            registroSolicitud.descripcion = richTextBox1.Text;
+            
             db.setRegistro(registroSolicitud);
         }
 
         private string getTipo()
-        {
-            if (radioButton1.Checked)            
-                return "Reporte ceduda perdida";
-            if (radioButton2.Checked)
-                return "Reporte cedula robada";
-            if (radioButton3.Checked)
-                return "Reporte cedula dañada";
+        { 
+            if (radNoLegalizada.Checked)
+            {
+                return "Acta No Legalizada";
+            }
+
+            if (redLegalizada.Checked)
+            {
+                return "Acta Legalizada";
+            }
             return "Default";
-                            
         }
     }
 }
