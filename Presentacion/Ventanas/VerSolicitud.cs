@@ -1,4 +1,5 @@
-﻿using FaceId.Modelo.base_de_datos;
+﻿using FaceId.Control;
+using FaceId.Modelo.base_de_datos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,15 @@ namespace FaceId.Presentacion.Ventanas
         private void registroSolicitudDtoBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Mensajes.getMensajeCancelar())
+            {
+                CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
+                frm.setVentana(Fabrica.getVentana(Ventana.Login));
+            }
         }
     }
 }

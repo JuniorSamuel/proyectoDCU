@@ -252,7 +252,7 @@ namespace FaceId.Presentacion.Ventanas
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(347, 566);
+            this.button1.Location = new System.Drawing.Point(330, 566);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 38);
             this.button1.TabIndex = 101;
@@ -269,7 +269,7 @@ namespace FaceId.Presentacion.Ventanas
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(242, 566);
+            this.button4.Location = new System.Drawing.Point(225, 566);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(99, 38);
             this.button4.TabIndex = 102;
@@ -326,7 +326,7 @@ namespace FaceId.Presentacion.Ventanas
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(462, 28);
+            this.button2.Location = new System.Drawing.Point(445, 28);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 33);
             this.button2.TabIndex = 104;

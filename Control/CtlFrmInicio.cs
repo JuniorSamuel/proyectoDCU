@@ -25,18 +25,14 @@ namespace FaceId.Control
         public static Persona user = new Persona();
         public static bool captu = false;
 
-        int testid = 0;
         private Capture videoCapture = null;
         private Image<Bgr, Byte> currentFrame = null;
         Mat frame = new Mat();
         private bool facesDetectionEnabled = true;
         CascadeClassifier faceCasacdeClassifier = new CascadeClassifier("haarcascade_frontalface_alt_tree.xml");
-        Image<Bgr, Byte> faceResult = null;
+        
         List<Image<Gray, Byte>> TrainedFaces = new List<Image<Gray, byte>>();
         List<int> PersonsLabes = new List<int>();
-
-        bool EnableSaveImage = false;
-        private bool isTrained = false;
         EigenFaceRecognizer recognizer;
         List<string> PersonsNames = new List<string>();
 
