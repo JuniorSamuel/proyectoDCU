@@ -46,7 +46,7 @@ namespace FaceId.Presentacion.Ventanas
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(56, 219);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(394, 57);
+            this.button1.Size = new System.Drawing.Size(476, 57);
             this.button1.TabIndex = 0;
             this.button1.Text = "Ver mis datos";
             this.button1.UseVisualStyleBackColor = false;
@@ -63,7 +63,7 @@ namespace FaceId.Presentacion.Ventanas
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(56, 142);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(394, 57);
+            this.button2.Size = new System.Drawing.Size(476, 57);
             this.button2.TabIndex = 1;
             this.button2.Text = "Solicitudes ";
             this.button2.UseVisualStyleBackColor = false;
@@ -80,7 +80,7 @@ namespace FaceId.Presentacion.Ventanas
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(56, 63);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(394, 57);
+            this.button3.Size = new System.Drawing.Size(476, 57);
             this.button3.TabIndex = 0;
             this.button3.Text = "Reporte";
             this.button3.UseVisualStyleBackColor = false;
@@ -97,7 +97,7 @@ namespace FaceId.Presentacion.Ventanas
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(56, 299);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(394, 57);
+            this.button4.Size = new System.Drawing.Size(476, 57);
             this.button4.TabIndex = 1;
             this.button4.Text = "Ver solicitudes";
             this.button4.UseVisualStyleBackColor = false;
@@ -112,9 +112,9 @@ namespace FaceId.Presentacion.Ventanas
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.MaximumSize = new System.Drawing.Size(508, 445);
+            this.MaximumSize = new System.Drawing.Size(590, 445);
             this.Name = "Login";
-            this.Size = new System.Drawing.Size(508, 445);
+            this.Size = new System.Drawing.Size(590, 445);
             this.ResumeLayout(false);
 
         }

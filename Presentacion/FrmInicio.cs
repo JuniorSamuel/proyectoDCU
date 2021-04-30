@@ -33,5 +33,10 @@ namespace FaceId
             CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
             frm.setVentana(Fabrica.getVentana(Ventana.Registro));
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

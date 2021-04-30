@@ -56,5 +56,14 @@ namespace FaceId.Presentacion.Ventanas
                 frm.setVentana(Fabrica.getVentana(Ventana.Login));
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Mensajes.getMensajeCancelar())
+            {
+                CtlFrmInicio frm = CtlFrmInicio.getCtlFrmInicio();
+                frm.setVentana(Fabrica.getVentana(Ventana.Login));
+            }
+        }
     }
 }

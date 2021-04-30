@@ -320,6 +320,7 @@ namespace FaceId.Presentacion.Ventanas
             this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.lblTelefonoVD);
             this.Controls.Add(this.lblNombre);
+            this.MaximumSize = new System.Drawing.Size(590, 445);
             this.Name = "Ver";
             this.Size = new System.Drawing.Size(590, 445);
             this.ResumeLayout(false);

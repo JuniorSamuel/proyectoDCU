@@ -32,17 +32,17 @@ namespace FaceId
             this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bnRegistro = new System.Windows.Forms.Button();
+            this.picVideo = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.picVideo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bnRegistro = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picVideo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picVideo)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -53,6 +53,7 @@ namespace FaceId
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(590, 445);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -63,6 +64,18 @@ namespace FaceId
             this.panel3.Size = new System.Drawing.Size(1020, 51);
             this.panel3.TabIndex = 5;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::FaceId.Properties.Resources.NoPath;
+            this.pictureBox1.Location = new System.Drawing.Point(373, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(270, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.bnRegistro);
@@ -72,41 +85,6 @@ namespace FaceId
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(430, 445);
             this.panel1.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.panel1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 51);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1020, 445);
-            this.panel4.TabIndex = 6;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 45000;
-            // 
-            // picVideo
-            // 
-            this.picVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picVideo.Location = new System.Drawing.Point(25, 24);
-            this.picVideo.Name = "picVideo";
-            this.picVideo.Size = new System.Drawing.Size(375, 254);
-            this.picVideo.TabIndex = 2;
-            this.picVideo.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(373, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // bnRegistro
             // 
@@ -125,6 +103,30 @@ namespace FaceId
             this.bnRegistro.UseVisualStyleBackColor = false;
             this.bnRegistro.Click += new System.EventHandler(this.bnRegistro_Click);
             // 
+            // picVideo
+            // 
+            this.picVideo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picVideo.Location = new System.Drawing.Point(25, 24);
+            this.picVideo.Name = "picVideo";
+            this.picVideo.Size = new System.Drawing.Size(375, 254);
+            this.picVideo.TabIndex = 2;
+            this.picVideo.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 51);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1020, 445);
+            this.panel4.TabIndex = 6;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 45000;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,10 +138,10 @@ namespace FaceId
             this.Name = "FrmInicio";
             this.Text = "Face ID";
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picVideo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picVideo)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

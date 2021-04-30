@@ -4,7 +4,6 @@ using Emgu.CV.Face;
 using Emgu.CV.Structure;
 using FaceId.Modelo.base_de_datos;
 using FaceId.Modelo.Entidades;
-using FaceId.Presentacion;
 using FaceId.Presentacion.Ventanas;
 using Modelo.Dao;
 using System;
@@ -13,21 +12,19 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FaceId.Control
 {
     class CtlFrmInicio
     {
-        //Ventana
+
+        #region Variables
         private static CtlFrmInicio Frm = null;
         FrmInicio frmInicio;
         public static Persona user = new Persona();
         public static bool captu = false;
 
-        #region Variables
         int testid = 0;
         private Capture videoCapture = null;
         private Image<Bgr, Byte> currentFrame = null;
@@ -76,7 +73,7 @@ namespace FaceId.Control
 
         private void timer_tick(object sender, EventArgs e)
         {
-            //setVentana(Fabrica.getVentana(Ventana.NoLogin));
+            setVentana(Fabrica.getVentana(Ventana.NoLogin));
             i = true;
         }
 
@@ -93,11 +90,11 @@ namespace FaceId.Control
         public void setVentana(UserControl panel)
         {
             if (frmInicio.panel2.Controls.Count != 0) frmInicio.panel2.Controls.RemoveAt(0);
-            
+
             //panel.Dock = DockStyle.Fill;
             panel.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom);
             frmInicio.panel2.Controls.Add(panel);
-            
+
         }
 
         private void inicialVideo(object sender, EventArgs e)
@@ -118,82 +115,58 @@ namespace FaceId.Control
 
                 //Step 2: Face Detection
                 if (facesDetectionEnabled)
-                {
-
-                    //Convert from Bgr to Gray Image
+                {                    
                     Mat grayImage = new Mat();
-                    CvInvoke.CvtColor(currentFrame, grayImage, ColorConversion.Bgr2Gray);
-                    //Enhance the image to get better result
+                    CvInvoke.CvtColor(currentFrame, grayImage, ColorConversion.Bgr2Gray);                    
                     CvInvoke.EqualizeHist(grayImage, grayImage);
-
                     Rectangle[] faces = faceCasacdeClassifier.DetectMultiScale(grayImage, 1.1, 3, Size.Empty, Size.Empty);
-                    //If faces detected
+                    
                     if (faces.Length > 0)
                     {
-
                         foreach (var face in faces)
-                        {
-                            //Draw square around each face 
-                            // CvInvoke.Rectangle(currentFrame, face, new Bgr(Color.Red).MCvScalar, 2);
-
-                            //Step 3: Add Person 
-                            //Assign the face to the picture Box face picDetected
+                        {   
                             Image<Bgr, Byte> resultImage = currentFrame.Convert<Bgr, Byte>();
-                            resultImage.ROI = face;
-                            //---picDetected.SizeMode = PictureBoxSizeMode.StretchImage;
-                            //---picDetected.Image = resultImage.Bitmap;
+                            resultImage.ROI = face;                            
 
                             if (CtlFrmInicio.captu)
-                            {
-                                
-                                //We will create a directory if does not exists!
+                            {                                
                                 string path = Directory.GetCurrentDirectory() + @"\imagenes";
                                 if (!Directory.Exists(path))
-                                    Directory.CreateDirectory(path);
-                                //we will save 10 images with delay a second for each image 
-                                //to avoid hang GUI we will create a new task
-                                
-                                    
-                                resultImage.Resize(200, 200, Inter.Cubic).Save(path + @"\" + CtlFrmInicio.user.cedula + "_" + DateTime.Now.ToString("dd-mm-yyyy-hh-mm-ss") + ".jpg");
-                                     
+                                    Directory.CreateDirectory(path);                            
 
+                                resultImage.Resize(200, 200, Inter.Cubic).Save(path + @"\" + CtlFrmInicio.user.cedula + "_" + DateTime.Now.ToString("dd-mm-yyyy-hh-mm-ss") + ".jpg");
                             }
+
                             CtlFrmInicio.captu = false;
 
-                            // Step 5: Recognize the face 
                             if (TrainImagesFromDir())
                             {
                                 Image<Gray, Byte> grayFaceResult = resultImage.Convert<Gray, Byte>().Resize(200, 200, Inter.Cubic);
                                 CvInvoke.EqualizeHist(grayFaceResult, grayFaceResult);
                                 var result = recognizer.Predict(grayFaceResult);
-                                //pictureBox1.Image = grayFaceResult.Bitmap;
-                                //CtlFrmInicio.user.imagen = TrainedFaces[result.Label].Bitmap;
+                                
                                 Debug.WriteLine(result.Label + ". " + result.Distance);
-                                //Here results found known faces
+                                
                                 if (result.Label != -1 && result.Distance < 1000)
                                 {
-                                    CvInvoke.PutText(currentFrame, PersonsNames[result.Label], new Point(face.X - 2, face.Y - 2),
+                                    CvInvoke.PutText(currentFrame, user.nombre, new Point(face.X - 2, face.Y - 2),
                                         FontFace.HersheyComplex, 1.0, new Bgr(Color.Orange).MCvScalar);
                                     CvInvoke.Rectangle(currentFrame, face, new Bgr(Color.Green).MCvScalar, 2);
-                                }
-                                //here results did not found any know faces
+                                }                                
                                 else
                                 {
                                     CvInvoke.PutText(currentFrame, "Desconocido", new Point(face.X - 2, face.Y - 2),
                                         FontFace.HersheyComplex, 1.0, new Bgr(Color.Orange).MCvScalar);
                                     CvInvoke.Rectangle(currentFrame, face, new Bgr(Color.Red).MCvScalar, 2);
-
                                 }
                             }
                         }
                     }
                 }
 
-                //Render the video capture into the Picture Box picCapture
                 frmInicio.picVideo.Image = currentFrame.Bitmap;
             }
 
-            //Dispose the Current Frame after processing it to reduce the memory consumption.
             if (currentFrame != null)
                 currentFrame.Dispose();
         }
@@ -204,9 +177,6 @@ namespace FaceId.Control
                 Directory.CreateDirectory(path);
         }
 
-
-        
-        //Step 4: train Images .. we will use the saved images from the previous example 
         private bool TrainImagesFromDir()
         {
             int ImagesCount = 0;
@@ -231,21 +201,21 @@ namespace FaceId.Control
                     Debug.WriteLine(ImagesCount + ". " + name);
 
                 }
-                
+
                 if (TrainedFaces.Count() > 0)
-                {                 
+                {
                     recognizer = new EigenFaceRecognizer(ImagesCount, Threshold);
-                    recognizer.Train(TrainedFaces.ToArray(), PersonsLabes.ToArray());                   
+                    recognizer.Train(TrainedFaces.ToArray(), PersonsLabes.ToArray());
                     frmInicio.timer1.Start();
-                                          
-                    if ( i ||idLogin != name)
+
+                    if (i || idLogin != name)
                     {
-                        PersonaDto dbPersona = new PersonaDto();                        
+                        PersonaDto dbPersona = new PersonaDto();
                         CtlFrmInicio.user = dbPersona.getPerosna(Int32.Parse(name));
                         setVentana(Fabrica.getVentana(Ventana.Login));
                         idLogin = name;
-                        i = false;                        
-                    }                                
+                        i = false;
+                    }
                     return true;
                 }
                 else
